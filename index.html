@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Guessing Game :3</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Game</a> |
+        <a href="test.html">Artist Lookup</a> |
+        <a href="test2.html">Song Lookup |</a>
+        <a href="play-song-by-id.html">Play Song By ID | </a>
+    </nav>
+
+    <h1>Music Guessing Game :3</h1>
+    <div id="artistOptions">
+
+        <h3 style="margin-bottom: 0;">Artist options:</h3>
+        IVE, aespa, Hearts2Hearts, LE SSERAFIM, ILLIT,
+        BABYMONSTER, IZNA, KiiiKiii, Katseye,
+        Kiss of Life, Twice, IDLE, NewJeans
+        <br>
+
+        <h3 style="margin-bottom: 0;">Player options:</h3>
+        thomas, eric, aaren, jaden, rebecca (aka all kpop songs)  
+        <br>
+
+        <h4 style="margin-bottom: 0;">Rules:</h4>
+        • You start each game with 5 lives. <br>
+        • Each round gives you 3 guesses. <br>
+        • After every incorrect guess, a new random clip from the same song will be played. <br>
+        • If you fail to guess the song within 3 guesses, you lose 1 life and the game moves on to the next song. <br>
+        • The game ends when you run out of lives. <br>
+        • Your score is the round you reached before the game ended.<br>
+    </div>
+    
+    <h1></h1>
+    <div id="startScreen">
+        <input
+            id="groupInput"
+            type="text"
+            placeholder="Enter groups or players separated by commas"
+            style="width: 500px;"
+        >
+
+        <br><br>
+
+        <label for="difficultySelect">Difficulty:</label>
+
+        <select id="difficultySelect">
+            <option value="5"> ☆ Aaren (5 seconds)</option>
+            <option value="3"> ☆☆ Easy (3 seconds)</option>
+            <option value="1" selected> ☆☆☆ Medium (1 second)</option>
+            <option value="0.5"> ☆☆☆☆ Hard (0.5 seconds)</option>
+        </select>
+
+        <br><br>
+
+        <button id="startBtn">Start Game</button>
+    </div>
+
+    <div id="gameScreen" style="display: none;">
+        <p id="selectedGroupsText"></p>
+        <p id="scoreText"></p>
+        <hr style="margin: 20px 0;">
+        <p id="status"></p>
+
+        <button id="playBtn">Play Clip</button>
+
+        <br><br>
+
+        <input id="guessInput" type="text" placeholder="Guess song title">
+        <button id="guessBtn">Submit Guess</button>
+
+        <br><br>
+
+        <button id="giveUpBtn">Give Up (skip this song)</button>
+        <button id="restartBtn">Start Over</button>
+    </div>
+
+    <script src="songs.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
